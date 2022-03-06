@@ -1,0 +1,336 @@
+.header {
+  padding-top: 3.125rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover .header__horizontal.frist {
+      width: 0px;
+      transform: translateX(-1000px);
+    }
+
+    &:hover .header__horizontal.second {
+      width: 0px;
+      transform: translateX(1000px);
+    }
+
+    &:hover .header__vertical.frist {
+      height: 100%;
+      transform: translate(-0.75rem, 0px);
+    }
+
+    &:hover .header__vertical.second {
+      height: 100%;
+      transform: translate(0.75rem, 0px);
+    }
+
+    > span {
+      position: absolute;
+      background-color: #ffd861;
+      transition: 0.5s;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffd861;
+  }
+
+  &__horizontal {
+    width: 100%;
+    height: 5px;
+
+    &.frist {
+      top: 0;
+      left: 0;
+    }
+
+    &.second {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__vertical {
+    height: 0%;
+    width: 6px;
+
+    &.frist {
+      top: 0;
+      left: 0;
+      transform: translate(-0.75rem, -1000px);
+    }
+
+    &.second {
+      bottom: 0;
+      right: 0;
+      transform: translateX(0.75rem, 1000px);
+    }
+  }
+}
+//============ price card section=============
+.priceCard {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 4rem;
+  //   transition: all 0.5s;
+
+  &__content {
+    background-color: #fff;
+    padding: 1.875rem;
+
+    &.table ::selection {
+      color: #fff;
+    }
+
+    // ===== Basic Card Style =====
+    &.basic .price__area,
+    &.basic .price__innerArea,
+    &.basic ::selection {
+      background-color: #ffd861;
+    }
+
+    &.basic .priceCard__btn button {
+      background-color: #fff;
+      border: 2px solid #ffd861;
+      color: #ffd861;
+      transition: all 0.3s;
+    }
+
+    &.basic .priceCard__btn:hover button {
+      background-color: #ffd861;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    &.basic .priceCard__packageName p::after,
+    &.basic .priceCard__packageName p::before {
+      background-color: #ffd861;
+    }
+  }
+
+  //============== price section ===============
+  .price {
+    display: flex;
+    justify-content: center;
+
+    &__area {
+      height: 7.5rem;
+      width: 7.5rem;
+      //   background-color: #ffd861;
+      border-radius: 50%;
+      padding: 2px;
+    }
+
+    &__innerArea {
+      height: 114px;
+      //   background-color: #ffd861;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      color: #fff;
+      position: relative;
+    }
+
+    &__text {
+      font-size: 1.5625rem;
+      font-weight: 400;
+      position: absolute;
+      top: 39%;
+      left: 19%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__nom {
+      font-size: 2.8125rem;
+      font-weight: 500;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  //   ============= package name ====================
+  &__packageName {
+    margin: 1.1875rem 2.1875rem;
+    padding: 0 1.25rem;
+
+    p {
+      text-align: center;
+      font-size: 1.5625rem;
+      font-weight: 500;
+    }
+
+    p::after,
+    p::before {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    p::before {
+      right: 0.5rem;
+      margin-left: -50%;
+    }
+
+    p::after {
+      left: 0.5rem;
+      margin-right: -50%;
+    }
+  }
+
+  //   ============= features ==============
+  &__item {
+    margin-bottom: 0.9375rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__listName {
+    font-size: 1.0625rem;
+    font-weight: 400;
+  }
+
+  &__listIcon {
+    font-size: 15px;
+
+    &.check {
+      color: #2db94d;
+    }
+
+    &.cross {
+      color: #cd3241;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.1875rem;
+    button {
+      width: 80%;
+      height: 50px;
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  }
+}
+
+// =========== premium Style =============
+
+.priceCard__content.premium {
+  position: relative;
+
+  .price__area,
+  .price__innerArea,
+  & ::selection {
+    background-color: #a26bfa;
+  }
+
+  .priceCard__btn button {
+    background-color: #fff;
+    border: 2px solid #a26bfa;
+    color: #a26bfa;
+    transition: all 0.3s;
+  }
+
+  .priceCard__btn:hover button {
+    background-color: #a26bfa;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  .priceCard__packageName p::after,
+  .priceCard__packageName p::before {
+    background-color: #a26bfa;
+  }
+
+  .ribbon {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 7px solid #4606ac;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      z-index: -1;
+    }
+
+    &::before {
+      top: -3px;
+      right: 15px;
+    }
+
+    &::after {
+      bottom: 15px;
+      left: -3px;
+    }
+
+    span {
+      position: absolute;
+      background-color: #a26bfa;
+      width: 200px;
+      padding: 10px 0;
+      color: #fff;
+      text-align: center;
+      top: 30px;
+      right: 0;
+      transform: rotate(-45deg);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+// ============== ultimate style ==============
+.priceCard__content.ultimate {
+  .price__area,
+  .price__innerArea,
+  & ::selection {
+    background-color: #43ef8b;
+  }
+
+  .priceCard__btn button {
+    background-color: #fff;
+    border: 2px solid #43ef8b;
+    color: #43ef8b;
+    transition: all 0.3s;
+  }
+
+  .priceCard__btn:hover button {
+    background-color: #43ef8b;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  .priceCard__packageName p::after,
+  .priceCard__packageName p::before {
+    background-color: #43ef8b;
+  }
+}

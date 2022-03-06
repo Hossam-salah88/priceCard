@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #647df9;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 1400px;
+  }
+}
+
+.header {
+  padding-top: 3.125rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header__text:hover .header__horizontal.frist {
+  width: 0px;
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+}
+
+.header__text:hover .header__horizontal.second {
+  width: 0px;
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+}
+
+.header__text:hover .header__vertical.frist {
+  height: 100%;
+  -webkit-transform: translate(-0.75rem, 0px);
+          transform: translate(-0.75rem, 0px);
+}
+
+.header__text:hover .header__vertical.second {
+  height: 100%;
+  -webkit-transform: translate(0.75rem, 0px);
+          transform: translate(0.75rem, 0px);
+}
+
+.header__text > span {
+  position: absolute;
+  background-color: #ffd861;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header__title {
+  font-size: 3rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffd861;
+}
+
+.header__horizontal {
+  width: 100%;
+  height: 5px;
+}
+
+.header__horizontal.frist {
+  top: 0;
+  left: 0;
+}
+
+.header__horizontal.second {
+  right: 0;
+  bottom: 0;
+}
+
+.header__vertical {
+  height: 0%;
+  width: 6px;
+}
+
+.header__vertical.frist {
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-0.75rem, -1000px);
+          transform: translate(-0.75rem, -1000px);
+}
+
+.header__vertical.second {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(0.75rem, 1000px);
+          transform: translateX(0.75rem, 1000px);
+}
+
+.priceCard {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 4rem;
+}
+
+.priceCard__content {
+  background-color: #fff;
+  padding: 1.875rem;
+}
+
+.priceCard__content.table ::-moz-selection {
+  color: #fff;
+}
+
+.priceCard__content.table ::selection {
+  color: #fff;
+}
+
+.priceCard__content.basic .price__area,
+.priceCard__content.basic .price__innerArea,
+.priceCard__content.basic ::-moz-selection {
+  background-color: #ffd861;
+}
+
+.priceCard__content.basic .price__area,
+.priceCard__content.basic .price__innerArea,
+.priceCard__content.basic ::selection {
+  background-color: #ffd861;
+}
+
+.priceCard__content.basic .priceCard__btn button {
+  background-color: #fff;
+  border: 2px solid #ffd861;
+  color: #ffd861;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.priceCard__content.basic .priceCard__btn:hover button {
+  background-color: #ffd861;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.priceCard__content.basic .priceCard__packageName p::after,
+.priceCard__content.basic .priceCard__packageName p::before {
+  background-color: #ffd861;
+}
+
+.priceCard .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.priceCard .price__area {
+  height: 7.5rem;
+  width: 7.5rem;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.priceCard .price__innerArea {
+  height: 114px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  color: #fff;
+  position: relative;
+}
+
+.priceCard .price__text {
+  font-size: 1.5625rem;
+  font-weight: 400;
+  position: absolute;
+  top: 39%;
+  left: 19%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.priceCard .price__nom {
+  font-size: 2.8125rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.priceCard__packageName {
+  margin: 1.1875rem 2.1875rem;
+  padding: 0 1.25rem;
+}
+
+.priceCard__packageName p {
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+
+.priceCard__packageName p::after,
+.priceCard__packageName p::before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.priceCard__packageName p::before {
+  right: 0.5rem;
+  margin-left: -50%;
+}
+
+.priceCard__packageName p::after {
+  left: 0.5rem;
+  margin-right: -50%;
+}
+
+.priceCard__item {
+  margin-bottom: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.priceCard__listName {
+  font-size: 1.0625rem;
+  font-weight: 400;
+}
+
+.priceCard__listIcon {
+  font-size: 15px;
+}
+
+.priceCard__listIcon.check {
+  color: #2db94d;
+}
+
+.priceCard__listIcon.cross {
+  color: #cd3241;
+}
+
+.priceCard__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2.1875rem;
+}
+
+.priceCard__btn button {
+  width: 80%;
+  height: 50px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.priceCard__content.premium {
+  position: relative;
+}
+
+.priceCard__content.premium .price__area,
+.priceCard__content.premium .price__innerArea,
+.priceCard__content.premium ::-moz-selection {
+  background-color: #a26bfa;
+}
+
+.priceCard__content.premium .price__area,
+.priceCard__content.premium .price__innerArea,
+.priceCard__content.premium ::selection {
+  background-color: #a26bfa;
+}
+
+.priceCard__content.premium .priceCard__btn button {
+  background-color: #fff;
+  border: 2px solid #a26bfa;
+  color: #a26bfa;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.priceCard__content.premium .priceCard__btn:hover button {
+  background-color: #a26bfa;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.priceCard__content.premium .priceCard__packageName p::after,
+.priceCard__content.premium .priceCard__packageName p::before {
+  background-color: #a26bfa;
+}
+
+.priceCard__content.premium .ribbon {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+
+.priceCard__content.premium .ribbon::before, .priceCard__content.premium .ribbon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 7px solid #4606ac;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  z-index: -1;
+}
+
+.priceCard__content.premium .ribbon::before {
+  top: -3px;
+  right: 15px;
+}
+
+.priceCard__content.premium .ribbon::after {
+  bottom: 15px;
+  left: -3px;
+}
+
+.priceCard__content.premium .ribbon span {
+  position: absolute;
+  background-color: #a26bfa;
+  width: 200px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  top: 30px;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.priceCard__content.ultimate .price__area,
+.priceCard__content.ultimate .price__innerArea,
+.priceCard__content.ultimate ::-moz-selection {
+  background-color: #43ef8b;
+}
+
+.priceCard__content.ultimate .price__area,
+.priceCard__content.ultimate .price__innerArea,
+.priceCard__content.ultimate ::selection {
+  background-color: #43ef8b;
+}
+
+.priceCard__content.ultimate .priceCard__btn button {
+  background-color: #fff;
+  border: 2px solid #43ef8b;
+  color: #43ef8b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.priceCard__content.ultimate .priceCard__btn:hover button {
+  background-color: #43ef8b;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.priceCard__content.ultimate .priceCard__packageName p::after,
+.priceCard__content.ultimate .priceCard__packageName p::before {
+  background-color: #43ef8b;
+}
+/*# sourceMappingURL=main.css.map */
